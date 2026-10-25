@@ -1,0 +1,11 @@
+# Clúster de prueba: k3d create cluster --config examples/k3d/cluster.yaml
+# El Ingress de k3s (Traefik) queda en http://koios.localhost:8080.
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: koios
+servers: 1
+agents: 1
+ports:
+  - port: 127.0.0.1:8080:80
+    nodeFilters: [loadbalancer]

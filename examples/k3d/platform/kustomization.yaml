@@ -1,0 +1,20 @@
+# Plataforma para k3d (paso 2): expuesta por Traefik sin TLS.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../instance/base
+patches:
+  - target: {kind: KoiosPlatform}
+    patch: |-
+      - op: replace
+        path: /spec/public_base_url
+        value: http://koios.localhost:8080
+      - op: replace
+        path: /spec/ingress
+        value:
+          type: ingress
+          hostname: koios.localhost
+          ingress_class: traefik
+      - op: replace
+        path: /spec/database/storage_size
+        value: 2Gi

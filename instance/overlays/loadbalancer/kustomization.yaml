@@ -1,0 +1,16 @@
+# Exposición con un Service LoadBalancer (TLS fuera del clúster o en el balanceador).
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+patches:
+  - target: {kind: KoiosPlatform}
+    patch: |-
+      - op: replace
+        path: /spec/public_base_url
+        value: https://koios.example.com
+      - op: replace
+        path: /spec/ingress
+        value:
+          type: loadbalancer
+          hostname: koios.example.com

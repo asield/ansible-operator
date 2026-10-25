@@ -1,0 +1,15 @@
+# Registro privado: añade el pull secret koios-quay-pull al operador y a la plataforma.
+# El Secret no está en este repositorio: créalo antes en el namespace (ver README).
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+patches:
+  - target: {kind: ServiceAccount, name: awx-operator-controller-manager}
+    patch: |-
+      - op: add
+        path: /imagePullSecrets
+        value: [{name: koios-quay-pull}]
+  - target: {kind: KoiosPlatform}
+    patch: |-
+      - op: add
+        path: /spec/image_pull_secrets
+        value: [koios-quay-pull]

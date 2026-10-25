@@ -1,0 +1,16 @@
+Koios Automation — despliegue con Kustomize
+
+The manifests, scripts and documentation in this repository are licensed under the
+Apache License, Version 2.0 (LICENSE).
+
+operator/koios-operator.yaml is generated from the Koios operator, a derivative of the
+Ansible community awx-operator (https://github.com/ansible/awx-operator, Apache-2.0),
+including its CustomResourceDefinitions.
+
+The container images referenced here contain AWX, Jewel, ansible-ui and their
+dependencies, each under its own license; the images carry those licenses under
+/licenses/koios/. PostgreSQL, Redis and Envoy images are used unmodified from their
+upstream registries under their own terms.
+
+Ansible is a registered trademark of Red Hat, Inc. This project is not affiliated with
+or endorsed by Red Hat and does not redistribute Red Hat Ansible Automation Platform.

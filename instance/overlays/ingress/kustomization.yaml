@@ -1,0 +1,18 @@
+# Exposición por Ingress con TLS en el borde. Cambia hostname, clase y Secret TLS.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+patches:
+  - target: {kind: KoiosPlatform}
+    patch: |-
+      - op: replace
+        path: /spec/public_base_url
+        value: https://koios.example.com
+      - op: replace
+        path: /spec/ingress
+        value:
+          type: ingress
+          hostname: koios.example.com
+          ingress_class: nginx
+          tls_secret: koios-tls

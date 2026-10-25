@@ -1,0 +1,10 @@
+# Operador Koios: CRDs, RBAC y Deployment, vigilando su propio namespace (awx).
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - koios-operator.yaml
+images:
+  - name: quay.io/ansible/awx-operator
+    newName: quay.io/koios/koios-operator
+    # 2026.10.0
+    digest: sha256:8743fd5d9fd8845b7316dd12a0723be0ba06baa3d896946cc295fd1729a532c1

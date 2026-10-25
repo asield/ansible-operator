@@ -1,0 +1,20 @@
+# Una instancia de Koios: gateway, UI y controller sobre un PostgreSQL y un Redis
+# compartidos que gestiona el operador. Las imágenes las pone el operador (fijadas por
+# digest en su versión); se pueden sustituir campo a campo en spec.controller, spec.gateway
+# y spec.ui.
+apiVersion: platform.koioss.com/v1alpha1
+kind: KoiosPlatform
+metadata:
+  name: koios
+spec:
+  public_base_url: http://koios-gateway.awx.svc
+  ingress:
+    type: none
+  database:
+    managed: true
+    storage_size: 8Gi
+  redis:
+    mode: standalone
+  ui:
+    enabled: true
+  no_log: true

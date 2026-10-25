@@ -1,0 +1,5 @@
+# Sin exposición: acceso dentro del clúster o con kubectl port-forward.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
