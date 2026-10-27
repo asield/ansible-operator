@@ -1,34 +1,66 @@
 ---
-name: Bug Report
-about: Report a problem in the project
-title: "🐞 [BUG] Describe the issue"
+name: Reporte de Error
+about: Reportar un problema o comportamiento inesperado en el proyecto
+title: "🐞 [BUG] Descripción breve del problema"
 labels: bug
-assignees: 'asield'
+assignees: "asield"
 ---
 
-## Description
-Provide a clear and concise description of the bug.
+## 📝 Descripción
 
-## Steps to Reproduce
-1. ...
-2. ...
-3. ...
+Proporciona una descripción clara y concisa del problema.
 
-## Expected Behavior
-What should happen instead?
+## 🔄 Pasos para reproducir
 
-## Screenshots
-If applicable, add screenshots to help explain the problem.
+Describe los pasos necesarios para reproducir el error:
 
-## Environment
-- Operating System:
-- Kubernetes version:
+1. Ir a '...'
+2. Hacer clic en '...'
+3. Ejecutar '...'
+4. Observar el error
+
+## ✅ Comportamiento esperado
+
+Describe qué debería ocurrir normalmente.
+
+## ❌ Comportamiento actual
+
+Describe qué ocurre realmente.
+
+## 📸 Capturas de pantalla o registros
+
+Si aplica, adjunta capturas de pantalla, registros (logs), mensajes de error o cualquier evidencia que ayude a comprender el problema.
+
+## 🌐 Entorno
+
+Completa la siguiente información:
+
+- Sistema Operativo:
+- Versión de Kubernetes:
 - StorageClass:
-- Ingress Controller:
-- koios version:
-- Architecture (amd64 / arm64):
-- CPU cores:
-- RAM (in GB):
+- Controlador de Ingress:
+- Versión de Koios:
+- Arquitectura (amd64 / arm64):
+- Núcleos de CPU:
+- Memoria RAM (GB):
 
-## Additional Context
-Add any other context about the problem here.
+## 📋 Información adicional
+
+Agrega cualquier contexto relevante que pueda ayudar a diagnosticar o reproducir el problema.
+
+## 🔍 Impacto
+
+Indica el impacto del problema:
+
+- [ ] Crítico (el sistema no funciona)
+- [ ] Alto (funcionalidad principal afectada)
+- [ ] Medio (funcionalidad secundaria afectada)
+- [ ] Bajo (problema menor o cosmético)
+
+## ✅ Verificación previa
+
+Antes de enviar este reporte, confirma que:
+
+- [ ] He revisado los issues existentes para evitar duplicados.
+- [ ] He incluido toda la información necesaria para reproducir el problema.
+- [ ] He adjuntado capturas de pantalla o logs cuando corresponde.
