@@ -133,3 +133,13 @@ curl -s http://koios.localhost:8080/api/controller/v2/ping/
 
 Apache-2.0 ([LICENSE](LICENSE)). Avisos de terceros en [NOTICE](NOTICE). Las
 imágenes llevan las licencias de sus componentes en `/licenses/koios/`.
+
+## Colaboradores
+
+<a href="https://github.com/asield/ansible-operator/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=asield/ansible-operator" />
+</a>
+
+## Star history
+
+[![Star History Chart](https://api.star-history.com/svg?repos=asield/ansible-operator&type=Date)](https://www.star-history.com/#asield/ansible-operator&Date)
